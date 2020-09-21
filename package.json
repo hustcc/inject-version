@@ -1,0 +1,30 @@
+{
+  "name": "inject-version",
+  "version": "1.0.0",
+  "description": "CLI tool to inject version into your source code when prepublishOnly.",
+  "license": "MIT",
+  "bin": {
+    "inject-version": "bin/index.js"
+  },
+  "files": [
+    "bin"
+  ],
+  "scripts": {
+    "build": "rimraf ./bin && tsc --module commonjs --outDir bin",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.1.0",
+    "tplv": "^1.0.0"
+  },
+  "keywords": [
+    "version",
+    "inject-version"
+  ],
+  "devDependencies": {
+    "@types/node": "^14.6.4",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.9.7"
+  }
+}
